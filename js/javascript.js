@@ -1,17 +1,23 @@
 // Put your custom code here
 var cart = [];
-var receipt_str;
 function displayCart(num_items) {
     var cartDiv = $('.cartDiv');
-    receipt_str = '';
+    var textStr = $('#textStr');
+    var emailStr = $('#emailStr');
+    var receipt_str = '';
+    var text_str = '';
+    var email_str = '';
     cartDiv.html(" ");
 
-        for (var item in cart) {
-            receipt_str += cart[item].name + ' ';
-        }
-        cartDiv.append('<p>' + receipt_str + ' Pizza</p>');
+    for (var item in cart) {
+        receipt_str += cart[item].name + ' ';
+        text_str += cart[item].name + '%20';
+        email_str += cart[item].name + '%20';
+    }
+    cartDiv.append('<p>' + receipt_str + ' Pizza</p>');
+    textStr.attr('href', 'sms://555-555-5555?body=' + text_str + 'Pizza');
+    emailStr.attr('href', 'mailto:ryan.eugene.gauthier@gmail.com?subject=Pizza%20order&body=' + email_str + 'Pizza');
 }
-
 $(document).ready(function () {
     // Add a buy button to each of my products
 
