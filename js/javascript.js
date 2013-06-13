@@ -126,17 +126,18 @@ function onDeviceReady() {
 //
 function onSuccess(position) {
     var element = document.getElementById('geolocation');
-//    element.innerHTML = 'Latitude: '           + position.coords.latitude              + '<br />' +
-//        'Longitude: '          + position.coords.longitude             + '<br />' +
-//        'Altitude: '           + position.coords.altitude              + '<br />' +
-//        'Accuracy: '           + position.coords.accuracy              + '<br />' +
-//        'Altitude Accuracy: '  + position.coords.altitudeAccuracy      + '<br />' +
-//        'Heading: '            + position.coords.heading               + '<br />' +
-//        'Speed: '              + position.coords.speed                 + '<br />' +
-//        'Timestamp: '          +                                   position.timestamp          + '<br />';
+    var mapElement = document.getElementById('directionMap');
+    element.innerHTML = 'Latitude: '           + position.coords.latitude              + '<br />' +
+        'Longitude: '          + position.coords.longitude             + '<br />' +
+        'Altitude: '           + position.coords.altitude              + '<br />' +
+        'Accuracy: '           + position.coords.accuracy              + '<br />' +
+        'Altitude Accuracy: '  + position.coords.altitudeAccuracy      + '<br />' +
+        'Heading: '            + position.coords.heading               + '<br />' +
+        'Speed: '              + position.coords.speed                 + '<br />' +
+        'Timestamp: '          +                                   position.timestamp          + '<br />';
 
-    var map_str = 'http://maps.google.com/maps?daddr=2234+E+Sprague+Ave,+Spokane,+WA+99207&saddr=' + position.coords.latitude + ',' + position.coords.longitude;
-    $("#directionMap").html(map_str);
+    var map_str = '<iframe width="360" height="360" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com/maps?daddr=2234+E+Sprague+Ave,+Spokane,+WA+99207&amp;saddr=' + position.coords.latitude + ',' + position.coords.longitude + '&amp;ie=UTF8&amp;t=h&amp;z=14&amp;output=embed"></iframe>';
+    mapElement.innerHTML = map_str;
 }
 
 // onError Callback receives a PositionError object
