@@ -95,7 +95,6 @@ $(document).ready(function () {
         }
         displayCart();
     });
-});
 
 //navigator.geolocation.getCurrentPosition(function (pos) {
 //    var lat = pos.coords.latitude;
@@ -145,3 +144,4 @@ function onError(error) {
 }
 
 
+});
