@@ -136,8 +136,8 @@ function onSuccess(position) {
         'Speed: '              + position.coords.speed                 + '<br />' +
         'Timestamp: '          +                                   position.timestamp          + '<br />';
 
-    var map_str = '<iframe width="360" height="360" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com/maps?daddr=2234+E+Sprague+Ave,+Spokane,+WA+99207&amp;saddr=' + position.coords.latitude + ',' + position.coords.longitude + '&amp;ie=UTF8&amp;t=h&amp;z=14&amp;output=embed"></iframe>';
-    mapElement.innerHTML = map_str;
+//    var map_str = '<iframe width="360" height="360" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com/maps?daddr=2234+E+Sprague+Ave,+Spokane,+WA+99207&amp;saddr=' + position.coords.latitude + ',' + position.coords.longitude + '&amp;ie=UTF8&amp;t=h&amp;z=14&amp;output=embed"></iframe>';
+//    mapElement.innerHTML = map_str;
 }
 
 // onError Callback receives a PositionError object
