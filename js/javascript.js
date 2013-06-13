@@ -49,6 +49,7 @@ $(document).ready(function () {
                 html: data
             }).appendTo('.cartDiv');
         });
+        displayCart();
 
     });
 
