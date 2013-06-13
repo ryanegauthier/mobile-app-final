@@ -90,7 +90,7 @@ function onDeviceReady() {
 function onSuccess(position) {
     var mapElement = document.getElementById('directionMap');
 
-    var map_str = '<iframe width="360" height="360" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com/maps?daddr=2234+E+Sprague+Ave,+Spokane,+WA+99207&amp;saddr=' + position.coords.latitude + ',' + position.coords.longitude + '&amp;ie=UTF8&amp;t=h&amp;z=10&amp;output=embed"></iframe>';
+    var map_str = '<iframe width="360" height="360" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com/maps?daddr=2234+E+Sprague+Ave,+Spokane,+WA+99207&amp;saddr=' + position.coords.latitude + ',' + position.coords.longitude + '&amp;ie=UTF8&amp;t=h&amp;z=13&amp;output=embed"></iframe>';
 
     mapElement.innerHTML = map_str;
 }
