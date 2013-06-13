@@ -126,6 +126,7 @@ function onDeviceReady() {
 //
 function onSuccess(position) {
     var element = document.getElementById('geolocation');
+    var mapElement = document.getElementById('directionMap');
     element.innerHTML = 'Latitude: '           + position.coords.latitude              + '<br />' +
         'Longitude: '          + position.coords.longitude             + '<br />' +
         'Altitude: '           + position.coords.altitude              + '<br />' +
